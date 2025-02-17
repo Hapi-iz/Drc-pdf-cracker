@@ -8,19 +8,9 @@ if %errorlevel% neq 0 (
     echo    https://www.python.org/downloads/
     echo After installation, restart this setup.
     echo.
-    echo 🔄 Waiting for you to install Python... Press any key once done.
+    echo Press any key to exit...
     pause >nul
-    goto :RETRY
-)
-
-:RETRY
-:: Re-check if Python is installed after user presses a key
-where python >nul 2>nul
-if %errorlevel% neq 0 (
-    echo ❌ Python is still not installed. Please install it and try again.
-    echo Press any key to check again...
-    pause >nul
-    goto :RETRY
+    exit /b
 )
 
 :: Install required dependencies
