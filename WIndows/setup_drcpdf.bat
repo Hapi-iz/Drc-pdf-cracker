@@ -16,6 +16,6 @@ pip install -r requirements.txt
 
 :: Run the cracker
 echo 🚀 Running DRC PDF Cracker...
-python drc_pdf_cracker.py %*
+python drcpdf.py %*
 
 endlocal
