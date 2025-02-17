@@ -63,17 +63,17 @@ def crack_pdf(pdf, wordlist, max_workers=4):
     total_attempts = sum(1 for _ in open(wordlist, encoding="latin-1", errors="ignore"))
 
     # Display a warning if the wordlist is large
-    if total_attempts > 1000000:  # Adjust this threshold based on your preference
+    if total_attempts > 1000000:  
         print(f"[bold yellow]Warning: The wordlist is large ({total_attempts} passwords). This process may take some time.[/bold yellow]")
         print("[bold yellow]Progress animation may not update as expected.[/bold yellow]")
 
-    print(f"Total attempts: {total_attempts}")  # Debugging line
+    print(f"Total attempts: {total_attempts}")  
 
     # Display number of threads being used
     print(f"[bold cyan]Number of threads being used: {max_workers}[/bold cyan]")
     
 
-    # Use Progress bar for visual feedback
+    #  Progress bar 
     with Progress() as progress:
         task = progress.add_task("[cyan]🔄 Brute-forcing...[/cyan]", total=total_attempts)
 
