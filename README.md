@@ -50,13 +50,12 @@ We are not responsible for any illegal use of this tool. Please use it ethically
 Once everything is set up, you can start cracking PDF files by running the following command in **Command Prompt**:
 
 ```bash
-python drc_pdf_cracker.py -p <path_to_pdf> -w <path_to_wordlist> -v -mp 4
+python drcpdf.py -p <path_to_pdf> -w <path_to_wordlist> -v -mp 4
 ```
 
 ### Arguments:
 - `-p <path_to_pdf>`: Path to the PDF file you want to crack.
 - `-w <path_to_wordlist>`: Path to the wordlist file you want to use.
-- `-v`: Enable verbose output (shows detailed cracking process).
 - `-mp <num_threads>`: Number of threads for multi-threading (default is 4).
 
 ---
@@ -90,7 +89,7 @@ Make sure to do this in the folder where the repository is located.
 **Solution**:  
 - Ensure that the wordlist you are using is large enough.
 - Try reducing the number of threads (`-mp` flag) if the tool hangs due to resource limitations.
-- Use the verbose flag (`-v`) to check the current status of the brute-forcing process.
+
 
 ### Issue 4: **PDF is not being cracked**
 **Solution**:  
