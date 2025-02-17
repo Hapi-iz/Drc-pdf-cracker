@@ -1,37 +1,17 @@
 @echo off
-setlocal
+echo Installing dependencies...
 
-:: Check if Python is installed
+:: Install Python if not present
 where python >nul 2>nul
-if %errorlevel% neq 0 (
-    echo 🔴 Python not found! 
-    echo Please install Python manually from:
-    echo    https://www.python.org/downloads/
-    echo After installation, restart this setup.
-    echo.
-    echo Press any key to exit...
-    pause >nul
+if errorlevel 1 (
+    echo Python not found. Please install Python first.
     exit /b
 )
 
-:: Ensure Python is recognized before proceeding
-python --version >nul 2>nul
-if %errorlevel% neq 0 (
-    echo ❌ Python installation is not recognized! Please restart your PC after installation.
-    echo Press any key to exit...
-    pause >nul
-    exit /b
-)
-
-:: Install required dependencies
-echo 🔄 Installing dependencies...
+:: Install required Python packages
 pip install -r requirements.txt
 
-:: Run the cracker
-echo 🚀 Running DRC PDF Cracker...
-python drcpdf.py %*
+:: Run the PDF Cracker script
+python pdf_cracker.py %*
 
-:: Keep CMD open
-echo.
-echo ✅ Setup complete! Press any key to exit...
-pause >nul
+pause
