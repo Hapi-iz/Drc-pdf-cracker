@@ -1,4 +1,0 @@
-pikepdf
-rich
-argparse
-pyfiglet
