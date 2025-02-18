@@ -1,47 +1,98 @@
-# DRC PDF Brute Force Cracker
+# DRC PDF Cracker
 
-A tool to crack PDF passwords using a wordlist in a brute force manner. This tool is designed for ethical purposes only.
-
-## Disclaimer
-We are not responsible for any illegal use of this tool. Please use it ethically and in compliance with all applicable laws. Use this tool only for educational purposes and with your own files.
+DRC PDF Cracker is a Python-based tool that performs brute-force password cracking on encrypted PDF files using a wordlist. The tool utilizes multiple threads for efficient password guessing and provides progress updates through a rich command-line interface.
 
 ## Features
-- Brute force cracking of PDF files
-- Configurable wordlist and thread count
-- Verbose output for better understanding of progress
 
----
+- **Brute-force PDF Password Cracking**: Attempts to crack PDF passwords using a wordlist.
+- **Multi-threaded Execution**: Speeds up the process by utilizing multiple threads.
+- **Rich CLI Interface**: Provides a visually appealing interface with progress bars and status messages.
+- **Automatic Installation of Dependencies**: Checks and installs missing dependencies like `rich`, `pikepdf`, and `pyfiglet`.
 
 ## Requirements
 
-- **Python 3.6+** (Python 3.8 or newer recommended)
-- **Operating System**: Windows
-- **Dependencies**: You can install the required dependencies via `requirements.txt`.
+- Python 3.x
+- Pip (Python package manager)
+- A wordlist file for password guessing
+- A password-protected PDF file to crack
+
+
+## Auto install Requriements 
+
+The script will automatically check for required dependencies and install any missing ones.
+
+If the script detects that pip is not installed, it will attempt to install pip automatically. If Python is missing, it will provide an error message prompting the user to install Python.
 
 ---
 
-## Setup Instructions (Windows)
+## Installing Python and Pip
 
-1. **Download the Repository**  
-   Download or clone the repository to your local machine.
+### On Windows:
 
-2. **Install Python**  
-   - If Python is not already installed, download and install Python from the [official website](https://www.python.org/downloads/).  
-   - During installation, make sure to check the "Add Python to PATH" checkbox.
+1. **Download Python**:
+   - Visit the official Python website: [https://www.python.org/downloads/](https://www.python.org/downloads/)
+   - Download and install Python for Windows (ensure you check the box to "Add Python to PATH" during installation).
 
-3. **Install Dependencies**  
-   - Open **Command Prompt** (Press `Win + R`, type `cmd`, and hit Enter).
-   - Navigate to the folder where the repository is located:
+2. **Verify Python and Pip**:
+   - Open Command Prompt and type the following to check if Python and `pip` are installed:
      ```bash
-     cd path\to\your\repository
+     python --version
+     pip --version
      ```
-   - Run the following command to install dependencies:
+   - If `pip` is not installed, run the following command to install it:
      ```bash
-     pip install -r requirements.txt
+     python -m ensurepip --upgrade
      ```
 
-4. **Run the Setup Script**  
-   - Run the `setup_drcpdf.bat` script by double-clicking it. This will automatically configure your environment.
+### On Linux (Ubuntu/Debian-based distributions):
+
+1. **Install Python**:
+   - Open Terminal and run:
+     ```bash
+     sudo apt update
+     sudo apt install python3
+     ```
+
+2. **Install Pip**:
+   - Run the following to install `pip`:
+     ```bash
+     sudo apt install python3-pip
+     ```
+
+3. **Verify Installation**:
+   - Check if Python and `pip` are installed:
+     ```bash
+     python3 --version
+     pip3 --version
+     ```
+
+### On macOS:
+
+1. **Install Python**:
+   - macOS usually comes with Python pre-installed, but you can install the latest version using Homebrew:
+     ```bash
+     brew install python
+     ```
+
+2. **Install Pip**:
+   - `pip` should come with the Python installation. If it's not installed, use the following command:
+     ```bash
+     python3 -m ensurepip --upgrade
+     ```
+
+3. **Verify Installation**:
+   - Check if Python and `pip` are installed:
+     ```bash
+     python3 --version
+     pip3 --version
+     ```
+
+## Installation
+
+1. Clone the repository or download the script.
+   ```bash
+   git clone https://github.com/Hapi-iz/Drc-pdf-cracker.git
+   cd Drc-pdf-cracker
 
 ---
 
